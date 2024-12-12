@@ -530,8 +530,9 @@ function roundToNearestInteger(/* number */) {
  * 5.4  => 5
  * -5.5 => -5
  */
-function getIntegerPartNumber(/* number */) {
-  throw new Error('Not implemented');
+function getIntegerPartNumber(number) {
+  const myParam = number;
+  return Math.trunc(myParam);
 }
 
 /**
@@ -609,8 +610,15 @@ function getHypotenuse(/* a, b */) {
  * 10 => 5
  * 15 => 8
  */
-function getCountOfOddNumbers(/* number */) {
-  throw new Error('Not implemented');
+function getCountOfOddNumbers(number) {
+  const myNumber = number;
+  let sumI = 0;
+  for (let i = 0; i <= Math.abs(myNumber); i += 1) {
+    if (i % 2 !== 0) {
+      sumI += 1;
+    }
+  }
+  return sumI;
 }
 
 module.exports = {
